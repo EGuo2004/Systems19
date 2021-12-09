@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	fp = open("FromParent", O_TRUNC | O_WRONLY);
 	fc = open("FromChild", O_RDONLY);
 	char line[100];
-	
+	printf("check\n");
 	while(1) {
 		printf("What do you want?\n");
 		fgets(line, sizeof(line), stdin);
