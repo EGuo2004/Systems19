@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 	mkfifo("FromChild" , 0644);
 	int fp;
 	int fc;
-	fp = open("FromParent", O_TRUNC | O_WRONLY);
+	fp = open("FromParent", O_WRONLY);
 	fc = open("FromChild", O_RDONLY);
 	char line[100];
 	printf("check\n");

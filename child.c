@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 	int fp;
 	int fc;
 	fp = open("FromParent", O_RDONLY);
-	fc = open("FromChild", O_TRUNC | O_WRONLY);
+	fc = open("FromChild", O_WRONLY);
 	while(1) {
 		read(fp,line,sizeof(line));
 		int counter;
