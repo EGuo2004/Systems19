@@ -21,12 +21,12 @@ int main(int argc, char *argv[]) {
 	fc = open("FromChild", O_WRONLY);
 	while(1) {
 		read(fp,line,sizeof(line));
+		close(fp);
 		int counter;
 		for(counter = 0; counter < strlen(line); counter++) {
 			line[counter] = toupper(line[counter]);
 		}
 		write(fc, line, sizeof(line));
-		close(fp);
 		close(fc);
 	}
 	return 0;
