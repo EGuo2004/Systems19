@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 		printf("What do you want?\n");
 		fgets(line, sizeof(line), stdin);
 		write(fp, line, sizeof(line));
-		read(fp,line,sizeof(line));
+		read(fc,line,sizeof(line));
 		printf("Here:%s\n", line);
 		close(fp);
 		close(fc);
